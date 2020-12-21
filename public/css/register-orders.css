@@ -1,0 +1,59 @@
+.form-area {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 32px;
+}
+
+.form-area--inputs .input-area {
+    margin-top: 14px;
+}
+
+.form-area--inputs .input-area .label {
+    color: var(--color-light);
+    font-weight: 600;
+}
+
+.form-area--inputs .input-area .textarea {
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+    background: var(--color-blacked);
+    color: var(--color-light);
+    font-family: var(--poppins);
+    transition: 0.2s;
+}
+
+.form-area--inputs .input-area .input {
+    padding: 22px 14px;
+    border-radius: 10px;
+    border: none;
+    background: var(--color-blacked);
+    color: var(--color-light);
+    font-family: var(--poppins);
+    transition: 0.2s;
+}
+
+.form-area--inputs .input-area .input:focus {
+    background: var(--color-blacked);
+    outline: none;
+    border: none;
+    transition: 0.2s;
+}
+
+.btn-group {
+    width: 100%;
+    display: flex;
+    grid-gap: 32px;
+}
+
+.btn-group .btn-done {
+    background-color: var(--color-green);
+    color: var(--color-light);
+    font-weight: 600;
+}
+
+.btn-group .btn-clear {
+    background-color: var(--color-red);
+    color: var(--color-light);
+    font-weight: 600;
+}
