@@ -1,8 +1,19 @@
 .sec-title {
+    margin-bottom: 12px;
     padding-top: 12px;
     color: var(--color-light);
     font-weight: 700;
-    font-size: var(--font-22px);
+    font-size: var(--font-24px);
+}
+
+.sec-title::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    margin-top: 12px;
+    width: 80px;
+    height: 2px;
+    background-color: var(--color-light);
 }
 
 .card-header {
