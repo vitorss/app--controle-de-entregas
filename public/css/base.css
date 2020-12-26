@@ -207,32 +207,32 @@
 }
 
 .action .btn-add-pedido {
-    padding: 10px 18px;
-    background: rgba(85, 0, 221, 0.315);
-    border: none;
-    border-radius: 10px;
-    transition: .3s;
-}
-
-.action .btn-add-pedido a {
-    display: flex;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    grid-gap: 10px;
+    padding: 12px 16px;
+    background-color: rgba(85, 0, 221, 0.26);
     color: var(--color-light);
-}
-
-.action .btn-add-pedido a i {
-    margin-right: 8px;
-    font-weight: 600;
-    font-size: 18px;
+    font-size: var(--font-18px);
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s;
 }
 
 .action .btn-add-pedido:hover {
     background: rgba(85, 0, 221, 0.568);
-    transition: .3s;
+}
+
+.action .btn-add-pedido i {
+    margin-bottom: 2px;
+    font-weight: 600;
+}
+
+.action .add-order {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .btn-check {
