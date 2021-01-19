@@ -3,64 +3,116 @@
         <h2 class="sec-title">Cadastro de pedidos</h2>
     </div>
     <div class="form-area mt-3">
-        <form class="form-row g-3 form-area--inputs">
-            <div class="col-md-4 input-area">
-                <label for="" class="form-label label">Destinatário</label>
-                <input type="text" class="input form-control" placeholder="Ex: André Gomes" id="">
-            </div>
-            <div class="col-md-4 input-area">
-                <label for="" class="form-label label">Endereço de entrega</label>
-                <input type="text" class="input form-control" placeholder="Ex: 145, Rua das Almas" id="">
-            </div>
-            <div class="col-md-4 input-area">
-                <label for="" class="form-label label">Contato do destinatário</label>
-                <input type="tel" class="input form-control" placeholder="Ex: (86)99985-5213" id="">
-            </div>
-            <div class="col-12 input-area">
-                <label for="" class="form-label label">Itens do pedido</label>
-                <textarea class="textarea form-control" id=""></textarea>
-            </div>
-            <div class="col-5 input-area">
-                <label for="" class="form-label label">Entregador</label>
-                <input type="text" class="input form-control" id="" placeholder="Ex: Luiz Castro">
-            </div>
-            <div class="col-4 input-area">
-                <label for="" class="form-label label">Data do pedido</label>
-                <input type="date" class="input form-control" id="">
-            </div>
-            <div class="col-md-3 input-area">
-                <label for="" class="form-label label">Valor do pedido</label>
-                <input type="text" class="input form-control" placeholder="Ex: R$ 129,90" id="">
-            </div>
-            <div class="col-12 input-area">
-                <label for="" class="form-label label">Descrição do pedido</label>
-                <textarea type="text" class="textarea form-control" id=""></textarea>
-            </div>
-            <div class="col-12 btn-group mt-4">
-                <button class="btn btn-done border-radius p-2">Cadastrar pedido</button>
-                <button class="btn btn-clear border-radius p-2">Limpar campos</button>
+        <form class="form-area--inputs">
+            <fieldset class="fieldset border-radius">
+                <legend>Informações e endereço do cliente</legend>
+                <div class="form-row">
+                    <div class="col-md-5 input-area">
+                        <label for="" class="form-label label">Destinatário</label>
+                        <input type="text" class="input form-control" placeholder="Ex: André Gomes" id="">
+                    </div>
+                    <div class="col-md-2 input-area">
+                        <label for="" class="form-label label">DDD</label>
+                        <input type="text" class="input form-control" placeholder="(XX)">
+                    </div>
+                    <div class="col-md-5 input-area">
+                        <label for="" class="form-label label">Telefone do destinatário</label>
+                        <input type="text" class="input form-control" placeholder="Ex: XXXXX-XXXX">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 input-area">
+                        <label for="" class="form-label label">Logradouro</label>
+                        <input type="text" class="input form-control" placeholder="Ex: 145, Rua dos Anjos" id="">
+                    </div>
+                    <div class="col-md-3 input-area">
+                        <label for="" class="form-label label">Número</label>
+                        <input type="text" class="input form-control" placeholder="Ex: 2145" id="">
+                    </div>
+                    <div class="col-md-5 input-area">
+                        <label for="" class="form-label label">Bairro</label>
+                        <input type="text" class="input form-control" placeholder="Ex: Escalvado" id="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 input-area">
+                        <label for="" class="form-label label">Complemento</label>
+                        <input type="text" class="input form-control" placeholder="Ex: Proximo ao banco do Bradesco" id="">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset border-radius">
+                <legend>Itens do pedido</legend>
+                <div class="form-row">
+                    <div class="col-md-4 input-area">
+                        <label for="" class="form-label label">Nome do produto</label>
+                        <input type="text" class="input form-control" id="">
+                    </div>
+                    <div class="col-md-4 input-area">
+                        <label for="" class="form-label label">Quantidade</label>
+                        <input type="number" class="input form-control" id="">
+                    </div>
+                    <div class="col-md-4 input-area">
+                        <label for="" class="form-label label">Preço do produto</label>
+                        <input type="text" class="input form-control" id="">
+                    </div>
+                    <button class="btn btn-incluir border-radius">
+                        <i class='bx bx-plus'></i><span>Incluir produto</span>
+                    </button>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset border-radius">
+                <legend>Informações extras</legend>
+                <div class="form-row">
+                    <div class="col-md-6 input-area">
+                        <label for="" class="form-label label">Nome do entregador</label>
+                        <input type="text" class="input form-control" id="" placeholder="Ex: Luiz Castro">
+                    </div>
+                    <div class="col-md-6 input-area">
+                        <label for="" class="form-label label">Data do pedido</label>
+                        <input type="date" class="input form-control" id="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 input-area">
+                        <label for="" class="form-label label">Observações do pedido</label>
+                        <textarea type="text" class="textarea form-control" id=""></textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-row">
+                <div class="col-12 btn-group mt-4">
+                    <button class="btn btn-done border-radius p-2">Cadastrar pedido</button>
+                    <button class="btn btn-clear border-radius p-2">Limpar campos</button>
+                </div>
             </div>
         </form>
         <div class="card blacked border-radius">
             <div class="card-header purple semi-radius">
-                <p class="title">Pedidos cadastrados</p>
+                <p class="title">Itens do pedido</p>
             </div>
             <div class="card-body">
                 <ul class="historic-requests">
                     <li class="historic-request-item">
-                        <p class="item-name">John Doe, Av. Alguma Coisa - 455</p>
+                        <p class="item-name">Produto: Açucar Mascavo - 2 Unidades</p>
                         <ul class="item-info task-info">
-                            <p class="item-price">Valor do Pedido: R$ 55,00</p>
+                            <p class="item-price">Valor do Produto: R$ 55,00</p>
                         </ul>
                     </li>
+
+                    <button class="border-radius" style="margin-top: 8px; padding: 8px 16px; background-color: var(--color-red); color: var(--color-light); border: none;font-size: 14px; font-weight: 600;">Remover produto</button>
                 </ul>
                 <ul class="historic-requests">
                     <li class="historic-request-item">
-                        <p class="item-name">John Doe, Av. Alguma Coisa - 455</p>
+                        <p class="item-name">Produto: Açucar Mascavo - 2 Unidades</p>
                         <ul class="item-info task-info">
-                            <p class="item-price">Valor do Pedido: R$ 55,00</p>
+                            <p class="item-price">Valor do Produto: R$ 55,00</p>
                         </ul>
                     </li>
+                    <button class="border-radius" style="margin-top: 8px; padding: 8px 16px; background-color: var(--color-red); color: var(--color-light); border: none;font-size: 14px; font-weight: 600;">Remover produto</button>
                 </ul>
             </div>
         </div>
