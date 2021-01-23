@@ -1,3 +1,5 @@
+const User = require('../models/User')
+
 exports.home = function(req, res) {
     res.render('pages/home')
 }
@@ -14,12 +16,19 @@ exports.area_pedidos = function(req, res) {
     res.render('pages/area-pedidos')
 }
 
-exports.login = function(req, res) {
+exports.signin = function(req, res) {
     res.render('pages/signin', { layout: 'pages/signin' })
 }
 
-exports.cadastro = function(req, res) {
+exports.signup = function(req, res) {
     res.render('pages/signup', { layout: 'pages/signup' })
+}
+
+exports.save = function(req, res) {
+    // console.log(req.body);
+    let user = new User(req.body)
+    user.create()
+    res.render('pages/home')
 }
 
 exports.reset = function(req, res) {

@@ -11,9 +11,10 @@ router.get('/itens-pedidos', mainController.itens_pedidos)
 
 router.get('/area-pedidos', mainController.area_pedidos)
 
-router.get('/login', mainController.login)
+router.get('/signin', mainController.signin)
 
-router.get('/cadastro', mainController.cadastro)
+router.get('/signup', mainController.signup)
+router.post('/register', mainController.save)
 
 router.get('/reset', mainController.reset)
 

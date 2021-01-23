@@ -31,7 +31,7 @@
                 </div>
                 <div class="sign-form col-md-5 black">
                     <div class="content">
-                        <form class="form">
+                        <form action="/register" method="POST" class="form">
                             <div class="sign-social--media mb-4">
                                 <p class="mb-3">Inscreva-se grátis e comece a trabalhar.</p>
                                 <a href="#" class="btn btn-facebook border-radius"><i class='bx bxl-facebook'></i>Inscrever-se com o Facebook</a>
@@ -43,31 +43,27 @@
                             </div>
                             <div class="form-row">
                                 <div class="col-md-12 input-area">
-                                    <label for="" class="form-label label mt-2">Nome completo</label>
-                                    <input type="text" class="input form-control" id="">
+                                    <label for="nome" class="form-label label mt-2">Nome completo</label>
+                                    <input type="text" class="input form-control" name="nome" id="nome">
                                 </div>
                                 <div class="col-md-12 input-area">
-                                    <label for="" class="form-label label mt-2">Nome de usuário</label>
-                                    <input type="email" class="input form-control" id="">
+                                    <label for="username" class="form-label label mt-2">Nome de usuário</label>
+                                    <input type="text" class="input form-control" name="username" id="username">
                                 </div>
-                                <div class="col-md-6 input-area">
-                                    <label for="" class="form-label label mt-2">Número de telefone</label>
-                                    <input type="tel" class="input form-control" id="">
-                                </div>
-                                <div class="col-md-6 input-area">
-                                    <label for="" class="form-label label mt-2">Data de nascimento</label>
-                                    <input type="date" class="input form-control" id="">
+                                <div class="col-md-12 input-area">
+                                    <label for="nascimento" class="form-label label mt-2">Data de nascimento</label>
+                                    <input type="date" class="input form-control" name="nascimento" id="nascimento">
                                 </div>
                                 <div class="col-6 input-area">
-                                    <label for="" class="form-label label mt-2">Senha</label>
-                                    <input type="password" class="input form-control" id="">
+                                    <label for="password" class="form-label label mt-2">Senha</label>
+                                    <input type="password" class="input form-control" name="password" id="password">
                                 </div>
                                 <div class="col-6 input-area">
-                                    <label for="" class="form-label label mt-2">Repetir senha</label>
-                                    <input type="password" class="input form-control" id="">
+                                    <label for="password_confirm" class="form-label label mt-2">Repetir senha</label>
+                                    <input type="password" class="input form-control" name="password_confirm" id="password_confirm">
                                 </div>
                                 <div class="col-12 btn-group mt-4">
-                                    <button class="btn btn-registro border-radius p-2">Inscrever-se no YORE</button>
+                                    <button type="submit" class="btn btn-registro border-radius p-2">Inscrever-se no YORE</button>
                                 </div>
                             </div>
                             <div class="divider">
@@ -75,7 +71,7 @@
                             </div>
                             <div class="sign-link">
                                 <p class="mb-3">Já possui uma conta?</p>
-                                <a href="/login" class="btn btn-sign--link border-radius">Faça login no YORE</a>
+                                <a href="/signin" class="btn btn-sign--link border-radius">Faça login no YORE</a>
                             </div>
                         </form>
                     </div>
