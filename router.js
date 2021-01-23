@@ -7,6 +7,8 @@ router.get('/', mainController.home);
 
 router.get('/cadastrar-pedidos', mainController.cadastrar_pedidos)
 
+router.get('/itens-pedidos', mainController.itens_pedidos)
+
 router.get('/area-pedidos', mainController.area_pedidos)
 
 router.get('/login', mainController.login)

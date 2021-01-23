@@ -6,6 +6,10 @@ exports.cadastrar_pedidos = function(req, res) {
     res.render('pages/cadastrar-pedidos')
 }
 
+exports.itens_pedidos = function(req, res) {
+    res.render('pages/itens-pedidos')
+}
+
 exports.area_pedidos = function(req, res) {
     res.render('pages/area-pedidos')
 }
