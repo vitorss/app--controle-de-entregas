@@ -13,7 +13,7 @@
     <main id="main">
         <div class="container-fluid">
             <div class="row">
-                <div class="sign-cover col-md-8">
+                <div class="sign-cover col-md-5">
                     <div class="content">
                         <div class="sign-header--cover">
                             <div class="logo">
@@ -29,8 +29,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="sign-form col-md-4 black">
-                    <div class="content">
+                <div class="sign-form col-md-7 black">
+                    <div class="content padding">
                         <form class="form">
                             <div class="sign-social--media mb-4">
                                 <p class="mb-3">Para continuar, faça login no YORE.</p>
@@ -41,23 +41,25 @@
                                 <p>ou</p>
                                 <span></span>
                             </div>
-                            <div class="mb-3 input-area">
-                                <label for="exampleInputEmail1" class="form-label label mt-2">Email ou nome de usuário</label>
-                                <input type="email" class="input form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div class="mb-1 input-area">
+                                <label for="username" class="form-label label mt-0">Email ou nome de usuário</label>
+                                <input type="text" class="input form-control" id="username" required>
+                                <small id="erro-username" style="font-weight: 600; color: var(--color-red);"></small>
                             </div>
-                            <div class="mb-3 input-area">
-                                <label for="exampleInputPassword1" class="form-label label mt-2">Senha</label>
-                                <input type="password" class="input form-control" id="exampleInputPassword1">
+                            <div class="mb-1 input-area">
+                                <label for="senha" class="form-label label mt-2">Senha</label>
+                                <input type="password" class="input form-control" id="senha" required>
+                                <small id="erro-password" style="font-weight: 600; color: var(--color-red);"></small>
                             </div>
                             <div class="form-forgot--pass mb-3">
                                 <a href="/reset">Esqueceu sua senha?</a>
                             </div>
                             <div class="form-check--btn">
-                                <div class="mb-3 form-check input-area">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label label" for="exampleCheck1">Lembrar de mim</label>
-                                </div>
-                                <button type="submit" class="btn btn-login border-radius">Entrar</button>
+                                <!-- <div class="mb-3 form-check input-area">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label label" for="rememberMe">Lembrar de mim</label>
+                                </div> -->
+                                <button type="submit" class="btn btn-login border-radius col-6" onclick="verify()">Entrar</button>
                             </div>
                             <div class="divider">
                                 <span></span>
@@ -77,5 +79,7 @@
         <p>Copyright &copy2020 Alguns direitos reservados | <span>YORE</span></p>
     </footer>
 </body>
+
+<script src="/js/verifyInputs.js"></script>
 
 </html>

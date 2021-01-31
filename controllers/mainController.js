@@ -1,11 +1,39 @@
 const User = require('../models/User')
+const Pedido = require('../models/Pedido')
 
-exports.home = function(req, res) {
-    res.render('pages/home')
+exports.home = async function(req, res) {
+    const pedido = new Pedido();
+
+    const totais = {
+        cadastrados: {
+            geral: await pedido.countTotal(),
+            mes: 10
+        },
+        entregues: {
+            geral: await pedido.countTotal({ status: 1 }),
+            mes: 321
+        },
+        naoEntregues: {
+            geral: 2313,
+            mes: 55
+        }
+    }
+
+    console.log(totais);
+    res.render('pages/home', { totais })
 }
+
+// exports.home = function(req, res) {
+//     res.render('pages/home')
+// }
 
 exports.cadastrar_pedidos = function(req, res) {
     res.render('pages/cadastrar-pedidos')
+}
+
+exports.pedido = function(req, res) {
+    const { id } = req.params;
+    res.render('pages/itens-pedidos', { id })
 }
 
 exports.itens_pedidos = function(req, res) {
@@ -27,8 +55,15 @@ exports.signup = function(req, res) {
 exports.save = function(req, res) {
     // console.log(req.body);
     let user = new User(req.body)
-    user.create()
-    res.render('pages/home')
+    user
+        .create()
+        .then(function(result) {
+            res.render('pages/home');
+        })
+        .catch(function(err) {
+            res.send(err);
+        });
+    // res.render('pages/home')
 }
 
 exports.reset = function(req, res) {

@@ -2,19 +2,24 @@
     padding: var(--font-48px);
 }
 
+.padding {
+    width: 100%;
+    padding: 100px 170px 70px 170px;
+}
+
 .sign-header--cover .logo img {
-    width: 150px;
+    width: 130px;
 }
 
 .sign-header--cover .legends .title {
-    font-size: var(--font-16px);
+    font-size: 15px;
     letter-spacing: 1px;
     font-weight: 600;
     color: var(--color-black);
 }
 
 .sign-header--cover .legends .subtitle {
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 1px;
     font-weight: 500;
     color: var(--color-gray);
@@ -33,12 +38,6 @@
 
 .backdrop-img img {
     width: 500px;
-}
-
-.sign {
-    display: grid;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .sign-form {
@@ -90,7 +89,7 @@
 .sign-form .input-area .label {
     font-size: 15px;
     color: var(--color-light);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .sign-form .input-area .input {
@@ -141,8 +140,8 @@
 
 .content .form .form-forgot--pass a {
     text-decoration: none;
-    color: var(--color-purple);
-    font-weight: 600;
+    color: var(--color-blue);
+    font-weight: 500;
     letter-spacing: 1px;
 }
 
