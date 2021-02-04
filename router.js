@@ -4,6 +4,7 @@ const mainController = require('./controllers/mainController')
 
 // rotas
 router.get('/', mainController.signin)
+router.post('/login', mainController.login)
 
 router.get('/signup', mainController.signup)
 router.post('/register', mainController.save)

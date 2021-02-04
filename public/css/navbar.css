@@ -103,18 +103,17 @@
     display: flex;
     align-items: center;
     padding: 10px 16px;
-    color: #404091;
+    color: var(--color-green);
     font-size: var(--font-22px);
     border-radius: 10px;
     border: none;
-    transition: 0.2s;
+    transition: all 0.3s;
 }
 
 .options .btn-user:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background-color: #019c69;
     border-color: rgba(255, 255, 255, 0);
     color: var(--color-light);
-    transition: 0.2s;
 }
 
 .menu-options .options .btn-user i {
@@ -124,8 +123,26 @@
 .menu-options .options .btn-user .username {
     font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-weight: 600;
+}
+
+.options .btn-login {
+    padding: 10px 16px;
+    margin-left: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    background-color: var(--color-black);
+    color: var(--color-green);
+    transition: all 0.3s;
+}
+
+.options .btn-login:hover {
+    background-color: #019c69;
+    color: var(--color-light);
 }
 
 .navbar-toggle {

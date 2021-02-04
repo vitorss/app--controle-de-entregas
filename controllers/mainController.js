@@ -1,31 +1,35 @@
 const User = require('../models/User')
 const Pedido = require('../models/Pedido')
 
-exports.home = async function(req, res) {
-    const pedido = new Pedido();
+// exports.home = async function(req, res) {
+//     const pedido = new Pedido();
 
-    const totais = {
-        cadastrados: {
-            geral: await pedido.countTotal(),
-            mes: 10
-        },
-        entregues: {
-            geral: await pedido.countTotal({ status: 1 }),
-            mes: 321
-        },
-        naoEntregues: {
-            geral: 2313,
-            mes: 55
-        }
-    }
+//     const totais = {
+//         cadastrados: {
+//             geral: await pedido.countTotal(),
+//             mes: 10
+//         },
+//         entregues: {
+//             geral: await pedido.countTotal({ status: 1 }),
+//             mes: 321
+//         },
+//         naoEntregues: {
+//             geral: 2313,
+//             mes: 55
+//         }
+//     }
 
-    console.log(totais);
-    res.render('pages/home', { totais })
-}
-
-// exports.home = function(req, res) {
-//     res.render('pages/home')
+//     console.log(totais);
+//     res.render('pages/home', { totais })
 // }
+
+exports.home = function(req, res) {
+    if (req.session.user) {
+        res.render("pages/home", { user: req.session.user })
+    } else {
+        res.render('pages/home')
+    }
+}
 
 exports.cadastrar_pedidos = function(req, res) {
     res.render('pages/cadastrar-pedidos')
@@ -48,6 +52,19 @@ exports.signin = function(req, res) {
     res.render('pages/signin', { layout: 'pages/signin' })
 }
 
+exports.login = function(req, res) {
+    let user = new User(req.body)
+    user.login().then(function(result) {
+        console.log(result);
+        req.session.user = {
+            username: user.data.username
+        }
+        res.render('pages/home')
+    }).catch(function(err) {
+        res.send(err);
+    })
+}
+
 exports.signup = function(req, res) {
     res.render('pages/signup', { layout: 'pages/signup' })
 }
@@ -58,7 +75,7 @@ exports.save = function(req, res) {
     user
         .create()
         .then(function(result) {
-            res.render('pages/home');
+            res.render('pages/signin', { layout: 'pages/signin' });
         })
         .catch(function(err) {
             res.send(err);

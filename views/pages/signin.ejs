@@ -31,7 +31,7 @@
                 </div>
                 <div class="sign-form col-md-7 black">
                     <div class="content padding">
-                        <form class="form">
+                        <form action="/login" method="POST" class="form">
                             <div class="sign-social--media mb-4">
                                 <p class="mb-3">Para continuar, faça login no YORE.</p>
                                 <a href="#" class="btn btn-facebook border-radius"><i class='bx bxl-facebook'></i>Continuar com o Facebook</a>
@@ -43,12 +43,12 @@
                             </div>
                             <div class="mb-1 input-area">
                                 <label for="username" class="form-label label mt-0">Email ou nome de usuário</label>
-                                <input type="text" class="input form-control" id="username" required>
+                                <input type="text" class="input form-control" name="username" id="username" required>
                                 <small id="erro-username" style="font-weight: 600; color: var(--color-red);"></small>
                             </div>
                             <div class="mb-1 input-area">
                                 <label for="senha" class="form-label label mt-2">Senha</label>
-                                <input type="password" class="input form-control" id="senha" required>
+                                <input type="password" class="input form-control" name="senha" id="senha" required>
                                 <small id="erro-password" style="font-weight: 600; color: var(--color-red);"></small>
                             </div>
                             <div class="form-forgot--pass mb-3">
@@ -76,7 +76,7 @@
         </div>
     </main>
     <footer class="footer blacked">
-        <p>Copyright &copy2020 Alguns direitos reservados | <span>YORE</span></p>
+        <p>Copyright &copy2021 Alguns direitos reservados | <span>YORE</span></p>
     </footer>
 </body>
 

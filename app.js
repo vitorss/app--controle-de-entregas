@@ -1,5 +1,17 @@
 const express = require('express');
+const session = require('express-session')
 const app = express();
+
+let sessionOptions = session({
+    secret: "minha_chave_secret",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        maxAge: 1000 * 60 * 60,
+        httpOnly: true
+    }
+})
+app.use(sessionOptions)
 
 const expressEjsLayouts = require('express-ejs-layouts');
 const router = require('./router');

@@ -9,10 +9,10 @@ Pedido.prototype.countTotal = async function({ status } = {}) {
     let query;
     let values;
     if (status) {
-        query = 'select count (*) from pedidos where status_pedido = $1; '
+        query = 'select count (*) from pedidos where status_pedido = $1'
         values = [status]
     } else {
-        query = 'select count (*) from pedidos;'
+        query = 'select count (*) from pedidos'
     }
 
     return pool

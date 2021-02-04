@@ -19,10 +19,16 @@
             </form>
             <div class="options">
                 <a class="btn btn-cog black" href="#"><i class='bx bx-cog'></i></a>
-                <a class="btn btn-user black" href="#">
-                    <i class='bx bx-user'></i>
-                    <span class="username">John Doe</span>
-                </a>
+                <% if(locals.user) { %>
+                    <a class="btn btn-user black" href="#">
+                        <i class='bx bx-user'></i>
+                        <span class="username">
+                            <%= user.username %></a>
+                        <% } else { %>
+                            <a href="/" class="btn-login border-radius">Entrar</a>
+                    </span>
+                    </a>
+                    <% } %>
             </div>
         </div>
         <div id="openSidenav" class="sidenav">
